@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="mb-5">
-        <div class="w-full min-h-[10vh] py-5 px-24 bg-black text-yellow-500 text-lg md:text-xl flex flex-col 
+        <div class="w-full min-h-[10vh] py-5 px-10 md:px-24 bg-black text-yellow-500 text-lg md:text-xl flex flex-col 
             md:flex-row justify-between items-center">
             <!-- logo -->
             <div>
@@ -17,9 +17,9 @@
                 </h1>
             </div>
             <!-- nav -->
-            <div>
+            <div class="text-sm md:text-xl my-5">
                 <nav>
-                    <ul class="flex gap-x-10 font-bold">
+                    <ul class="flex gap-x-5 md:gap-x-10 font-bold text-center">
                         <li class="transition duration-300 hover:text-blue-600">
                             <a href="">المدونة</a>
                         </li>
@@ -28,6 +28,16 @@
                         </li>
                         <li class="transition duration-300 hover:text-blue-600">
                             <a href="">تواصل معنا</a>
+                        </li>
+                        <li class="transition duration-300 hover:text-blue-600 cursor-pointer">
+                            <% if (username) { %>
+                                <span> ! مرحبا <%= username %>  </span>
+                                <li class="transition duration-300 hover:text-red-500 ">
+                                    <a href="/logout"> تسجيل الخروج </a>
+                                </li>
+                            <% } else { %>
+                                <a href="/login">سجل الان</a>
+                            <% } %>
                         </li>
                     </ul>
                 </nav>
@@ -40,6 +50,29 @@
     <main>
         <div class="text-center font-bold text-4xl text-black my-10">
             <span> من نحن؟ </span>
+        </div>
+        <div class="px-10 flex flex-col gap-10 justify-center text-center">
+            <p class="text-balance text-center font-semibold text-md">
+                صفحة من نحن نبذة عنا
+                قدم منصة متخصصة في التوظيف من خلال توفير قاعدة بيانات شاملة للشركات والمؤسسات في السوق السعودي تتيح المنصة فرصة لكل الباحثين عن عمل من خلال عرض الوظائف الشاغرة في الشركات؛ ليسهل على المتقدم إرسال سيرته الذاتية للوظيفة الأنسب له نلتزم بالشفافية التامة ونعرض كل المستجدات على المتقدم من خلال بريده الإلكتروني. توفر المنصة بيئة آمنة للباحثين عن الوظائف فجميع البيانات والسير الذاتية تُرسل بسرية تامة. نلتزم بتحديث قاعدة البيانات وإضافة المزيد من الشركات بشكل دوري؛ لنظل الخيار الأول للمستخدمين.
+                رؤيتنا
+                أن تكون منصة قدّم هي الوجهة الأولى لكل الباحثين عن وظائف في مختلف المجالات في المملكة العربية السعودية. رسالتنا
+                دعم الشباب في إيجاد فرص عمل مناسبة وإيصال سيرتهم الذاتية لكبرى الشركات في السوق السعودي ليبدأوا مسيرتهم المهنية.
+                أهدافنا
+                أن تكون منصة قدّم منصة رائدة في مجال التوظيف في المملكة. التوسع خارج السوق السعودي وتغطية منطقة الخليج العربي. دعم مائة ألف شاب في إيجاد عمل في العام الأول من الإطلاق. تقديم خدمات استشارية في التوظيف لتطوير مهارات الشباب.                
+            </p>
+            <div>
+                <span class="text-center font-bold text-4xl text-black my-10">قيمنا الشفافية</span>
+            </div>
+            <p class="text-balance text-center font-semibold text-md">
+                منذ التأسيس ونحن نحرص على أن تكون المنصة مثالا للشفافية والثقة من خلال بناء بيئة آمنة للمستخدمين تضمن لهم السرية المطلوبة.
+                التعاون
+                نتعاون معا لتقديم الدعم للشباب للحصول على فرصة تناسبهم؛ لنكون معهم من بداية مسيرتهم في
+                سوق العمل. التطوير
+                في مسيرة من التطوير لا تتوقف نعمل على تطوير المنصة لتظل دوما الوجهة الأولى للمستخدمين؛ ولنحقق المزيد من الإنجازات.
+                تكافؤ الفرص
+                نؤمن أن لكل فرد الحق في الحصول على فرصةٍ بشفافية تامة؛ ونساعد على تطبيق هذا المبدأ من خلال سياستنا.
+            </p>
         </div>
     </main>
 

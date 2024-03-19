@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="mb-5">
-        <div class="w-full min-h-[10vh] py-5 px-24 bg-black text-yellow-500 text-lg md:text-xl flex flex-col 
+        <div class="w-full min-h-[10vh] py-5 px-10 md:px-24 bg-black text-yellow-500 text-lg md:text-xl flex flex-col 
             md:flex-row justify-between items-center">
             <!-- logo -->
             <div>
@@ -17,9 +17,9 @@
                 </h1>
             </div>
             <!-- nav -->
-            <div>
+            <div class="text-sm md:text-xl my-5">
                 <nav>
-                    <ul class="flex gap-x-10 font-bold">
+                    <ul class="flex gap-x-5 md:gap-x-10 font-bold text-center">
                         <li class="transition duration-300 hover:text-blue-600">
                             <a href="">المدونة</a>
                         </li>
@@ -28,6 +28,16 @@
                         </li>
                         <li class="transition duration-300 hover:text-blue-600">
                             <a href="">تواصل معنا</a>
+                        </li>
+                        <li class="transition duration-300 hover:text-blue-600 cursor-pointer">
+                            <% if (username) { %>
+                                <span> ! مرحبا <%= username %>  </span>
+                                <li class="transition duration-300 hover:text-red-500 ">
+                                    <a href="/logout"> تسجيل الخروج </a>
+                                </li>
+                            <% } else { %>
+                                <a href="/login">سجل الان</a>
+                            <% } %>
                         </li>
                     </ul>
                 </nav>
@@ -40,6 +50,19 @@
     <main>
         <div class="text-center font-bold text-4xl text-black my-10">
             <span> كيف نعمل؟ </span>
+        </div>
+        <div class="px-10 flex flex-col gap-10 justify-center text-center">
+            <p class="text-balance text-center font-semibold text-md">
+
+                خدماتنا
+                احصل على وظيفتك
+                إذا كنت تبحث عن وظيفةٍ تناسب مؤهلاتك وخبراتك العملية فإن قدم هي خيارك الأول من خلال قاعدة بياناتٍ عملاقة تضم الكثير من شركات ومؤسسات السوق السعودي في كل المجالات ويُضاف إليها المزيد بشكل مستمر؛ يمكنك البحث الآن على الوظيفة التي تناسبك وإرفاق سيرتك الذاتية مباشرة؛ لنرسلها إلى الشركات المحددة.
+                نضمن لك الحفاظ على بياناتك ونلتزم بالشفافية الكاملة؛ إذ نرسل لك مباشرة عبر البريد الخاص بك تقريرا مفصلًا يتضمن تأكيد إرسال السيرة الذاتية إلى الشركات التي حددتها بنفسك، ونتابع معك كل المستجدات حتى تحصل على الوظيفة التي تريد.
+                كل ما عليك الآن هو تحديد مجال العمل والبحث بين الشركات وإرفاق سيرتك، ودع منصة قدّم تقدمك إلى سوق العمل.
+                ارسل سيرتك فريقنا
+                لأننا نسعى إلى الريادة أدركنا قيمة الفريق المميز؛ ونفتخر أن منصة قدّم تضم نخبة من المبدعين؛ الذين يتعاونون معا لتقديم الدعم للمستخدم، وتطوير المنصة لتكون الخيار الأمثل لكل من يبحث عن وظيفة في المملكة العربية السعودية. وأهم ما يميز فريقنا
+                فريق شامل في مختلف المجالات التي تضمن تطوير المنصة. فريق دعم محترف للرد على تساؤلات المستخدمين وحل مشكلاتهم. التعاون على تلبية حاجة المستخدم ومتابعة كل حالة بشكل شامل. التواصل المستمر وإرسال كل المستجدات بخصوص طلبات المستخدمين.
+            </p>
         </div>
     </main>
 

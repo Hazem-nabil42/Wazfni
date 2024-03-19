@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="mb-5">
-        <div class="w-full min-h-[10vh] py-5 px-24 bg-black text-yellow-500 text-lg md:text-xl flex flex-col 
+        <div class="w-full min-h-[10vh] py-5 px-10 md:px-24 bg-black text-yellow-500 text-lg md:text-xl flex flex-col 
             md:flex-row justify-between items-center">
             <!-- logo -->
             <div>
@@ -17,9 +17,9 @@
                 </h1>
             </div>
             <!-- nav -->
-            <div>
+            <div class="text-sm md:text-xl my-5">
                 <nav>
-                    <ul class="flex gap-x-10 font-bold">
+                    <ul class="flex gap-x-5 md:gap-x-10 font-bold text-center">
                         <li class="transition duration-300 hover:text-blue-600">
                             <a href="">المدونة</a>
                         </li>
@@ -28,6 +28,16 @@
                         </li>
                         <li class="transition duration-300 hover:text-blue-600">
                             <a href="">تواصل معنا</a>
+                        </li>
+                        <li class="transition duration-300 hover:text-blue-600 cursor-pointer">
+                            <% if (username) { %>
+                                <span> ! مرحبا <%= username %>  </span>
+                                <li class="transition duration-300 hover:text-red-500 ">
+                                    <a href="/logout"> تسجيل الخروج </a>
+                                </li>
+                            <% } else { %>
+                                <a href="/login">سجل الان</a>
+                            <% } %>
                         </li>
                     </ul>
                 </nav>
@@ -39,7 +49,17 @@
 
     <main>
         <div class="text-center font-bold text-4xl text-black my-10">
-            <span> تصل بنا </span>
+            <span> تواصل معنا </span>
+        </div>
+        <div class="px-10 flex flex-col gap-10 justify-center text-center">
+            <p class="text-balance text-center font-semibold text-md">
+                اتصل بنا
+                نشكركم لاختياركم منصة قدّم ونرجو لكم حياةً عمليةً مزهرة؛ وفريقنا في انتظار استقبال أسئلكم واستفساراتكم عبر القنوات التالية:
+                مركز الدعم
+                الجوال:
+                الواتساب:
+                ويمكنكم تعبئة نموذج الاتصال المباشر من المنصة؛ لنرد عليكم في أقرب وقت ممكن.
+            </p>
         </div>
     </main>
 

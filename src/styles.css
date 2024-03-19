@@ -8,7 +8,7 @@
 @layer components {
     .btn {
       @apply rounded-xl transition duration-300 hover:animate-bounce
-      grayscale hover:grayscale-0 hover:brightness-150 animate-[scale_3s_ease-in-out_infinite];
+      grayscale hover:grayscale-0 hover:brightness-150 animate-[scale_3s_ease-in-out_infinite] bg-slate-800;
     }
     .card{
       @apply w-[300px] h-[400px] bg-transparent rounded-2xl flex flex-col justify-between items-center
