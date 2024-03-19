@@ -37,10 +37,16 @@ app.use(express.urlencoded({extended: false}));
 app.set('view engine', 'ejs');
 app.use( '/public', express.static('public'));
 
+// render username var globally
+app.use((req, res, next) => {
+  // Set username variable globally
+  res.locals.username = req.session.user ? req.session.user.name : null;
+  next();
+});
+
 
 app.get('/', (req, res) => {
-    const username = req.session.user ? req.session.user.name : null;
-    res.render('home', { username: username });
+    res.render('home');
 })
 
 app.get('/about', (req, res) => {
