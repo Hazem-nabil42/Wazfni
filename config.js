@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const connect = mongoose.connect('mongodb://wazfni.onrender.com/LoginSystem');
+const connect = mongoose.connect('mongodb+srv://hazem:FUfQNfi1t9vs4LDT@cluster0.snn0kbk.mongodb.net/LoginSystem');
 
 connect.then(()  => {
     console.log("Database connected successfully");
