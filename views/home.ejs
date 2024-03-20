@@ -25,13 +25,25 @@
                 <nav>
                     <ul class="flex gap-x-5 md:gap-x-10 font-bold text-center">
                         <li class="transition duration-300 hover:text-blue-600">
-                            <a href="">المدونة</a>
+                            <a href="https://lenses4k.blogspot.com/2024/03/blog-post.html">المدونة</a>
                         </li>
                         <li class="transition duration-300 hover:text-blue-600">
-                            <a href="">الخدمات</a>
+                            <a href="#services" onclick="smoothScroll(event, '#services')">الخدمات</a>
                         </li>
+                        <script>
+                            function smoothScroll(event, target) {
+                            event.preventDefault(); // Prevent default anchor behavior
+                            var targetSection = document.querySelector(target);
+                            if (targetSection) {
+                                window.scrollTo({
+                                top: targetSection.offsetTop,
+                                behavior: 'smooth' // Smooth scrolling animation
+                                });
+                            }
+                            }
+                        </script>
                         <li class="transition duration-300 hover:text-blue-600">
-                            <a href="">تواصل معنا</a>
+                            <a href="/contact">تواصل معنا</a>
                         </li>
                         <li class="transition duration-300 hover:text-blue-600 cursor-pointer">
                             <% if (username) { %>
@@ -50,10 +62,19 @@
     </header>
 
     <main>
-        <section class=" w-full min-h-[400px] bg-transparent bg-hero bg-no-repeat bg-center bg-scroll 
-            bg-cover drop-shadow-lg text-white text-lg md:text-xl text-center md:text-right overflow-hidden
-            py-32 px-10 md:px-40 flex flex-col justify-between" 
+        <section class=" w-full min-h-fit bg-transparent bg-desktop bg-no-repeat bg-center bg-scr 
+            md:bg-cover drop-shadow-lg text-white text-lg md:text-4xl text-center overflow-hidden
+            py-20 md:py-32 px-10 md:px-40 flex flex-col justify-between md:w-full md:h-fit" 
             style="background-image: url('./public/images/banner.png');">
+            <style>
+            @media only screen and (min-width: 300px) {
+                /* For desktop screens */
+                .bg-desktop {
+                background-size: contain !important;
+                }
+            }
+
+            </style>
             <!-- swiper -->
             <div class="swiper-container overflow-hidden">
                 <div class="swiper-wrapper text-center text-slate-700 font-semibold">
@@ -64,19 +85,19 @@
                     </div>
                     <!-- slide 2 -->
                     <div class="swiper-slide">
-                        <p class="text-balance mb-10"> قدم المنصة الاولي للتوظيف في المملكة العربية السعودية ابدأ مسيرتك المهنية من هنا و احصل علي وظيفة احلامك </p>
+                        <p class="text-balance mb-10 text-sm md:text-xl my-3"> قدم المنصة الاولي للتوظيف في المملكة العربية السعودية ابدأ مسيرتك المهنية من هنا و احصل علي وظيفة احلامك </p>
                         <button class=" click-me "> ابحث عن وظيفتك </button>
                     </div>
                     <!-- slide 3 -->
                     <div class="swiper-slide p-10">  
                         <span> تبحث عن وظيفة مناسبة؟ </span>
-                        <p class="text-balance mb-10"> قدم سبيلك الي الحصول عليها كل ما عليك هو تحديد المجال و اختيار الشركة و ارفاق سيرتك الذاتية و سيصلك الرد في اقرب وقت</p>
+                        <p class="text-balance mb-10 text-sm md:text-xl my-3"> قدم سبيلك الي الحصول عليها كل ما عليك هو تحديد المجال و اختيار الشركة و ارفاق سيرتك الذاتية و سيصلك الرد في اقرب وقت</p>
                         <button class="click-me"> ارفق سيرتك الان </button>
                     </div>
                     <!-- slide 4 -->
                     <div class="swiper-slide">  
                         <span> تبحث عن وظيفة مناسبة؟ </span>
-                        <p class="text-balance mb-10"> قدم سبيلك الي الحصول عليها كل ما عليك هو تحديد المجال و اختيار الشركة و ارفاق سيرتك الذاتية و سيصلك الرد في اقرب وقت</p>
+                        <p class="text-balance mb-10 text-sm md:text-xl my-3"> قدم سبيلك الي الحصول عليها كل ما عليك هو تحديد المجال و اختيار الشركة و ارفاق سيرتك الذاتية و سيصلك الرد في اقرب وقت</p>
                         <button class="click-me"> ابدأ من اللحظة </button>
                     </div>
                 </div>
@@ -126,10 +147,13 @@
         </section>
 
         <!-- services -->
-        <section class="text-center my-10">
+        <section class="text-center my-10" id="services">
             <div class="flex flex-col justify-between py-20 px-10 gap-10">
-                <div class="text-4xl font-bold">
-                    <span> كلمة الرئيس التنفيذي </span>
+                <div class="text-4xl font-bold p-4 relative">
+                    <span class="inline-block text-white border-4 border-blue-400 p-7 px-32 bg-gradient-to-r
+                    from-[#159957] to-[#155799] rounded-2xl">
+                        كلمة الرئيس التنفيذي
+                    </span>
                 </div>
                 <div class="px-10">
                     <p class="text-balance text-center font-semibold text-md"> 
@@ -137,8 +161,11 @@
                     </p>
                 </div>
                 <!-- title -->
-                <div class="text-4xl font-bold">
-                    <span> الخدمات </span>
+                <div class="text-4xl font-bold p-4 relative ">
+                    <span class="inline-block text-white border-4 border-blue-400 p-7 px-32 bg-gradient-to-r
+                    from-[#159957] to-[#155799] rounded-2xl ">
+                        الخدمات
+                    </span>
                 </div>
                 <p class="text-balance text-center font-semibold text-md">
                     احصل على وظيفتك
@@ -200,7 +227,7 @@
                     <a href="/commonQ">الاسئلة الشائعه</a>
                 </li>
                 <li class="font-bold animate-pulse duration-300 mt-10">
-                    <a href="#">المدونه</a>
+                    <a href="https://lenses4k.blogspot.com/2024/03/blog-post.html">المدونه</a>
                 </li>
             </ul>
             <div class="text-xl font-bold">
